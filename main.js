@@ -21,7 +21,6 @@
 					return;
 				} else if(GAMESTACK[playerCursor++] !== this.idx) {
 					btns[this.idx].style.borderColor = COLORS[this.idx].active;
-					lastPressed = this.idx;
 					waitingInput = false;
 					AUDIO.ERROR.play();
 				} else {
@@ -121,10 +120,10 @@
 		pushGameStack();
 	}
 	
-	var lastPressed;
-	
 	function endGame() {
-		btns[lastPressed].style.borderColor = COLORS[lastPressed].idle;
+		btns.forEach(function(el, idx) {
+			btns[idx].style.borderColor = COLORS[idx].idle;
+		});
 		delete GAMESTACK;
 		enableInput();
 		gameOn = false;
