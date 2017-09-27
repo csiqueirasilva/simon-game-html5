@@ -1,0 +1,117 @@
+body, html {
+	margin: 0;
+}
+
+#highscore-wrapper {
+	position: absolute;
+	top: 2vh;
+	left: 2%;
+	font-size: 4vh;
+}
+
+#score-wrapper {
+	position: absolute;
+	top: 7vh;
+	left: 2%;
+	font-size: 4vh;
+}
+
+
+.simon-btn {
+	position: absolute;
+	line-height: 0;
+	width: 0;
+	height: 0;
+}
+
+#start-btn {
+	border-radius: 50%;
+	background-color: #fff;
+	-webkit-box-shadow:inset 0px 0px 0px 1vw #000;
+    -moz-box-shadow:inset 0px 0px 0px 1vw #000;
+    box-shadow:inset 0px 0px 0px 1vw #000;
+	width: 30%;
+	height: 30%;
+	top: 35%;
+    left: 35%;
+	position: absolute;
+}
+
+#label-marca {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 40%;
+	font-size: 2.5vw;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+						  supported by Chrome and Opera */
+}
+
+#label-marca:hover {
+	cursor: pointer;
+}
+
+.disableClick {
+	cursor: not-allowed;
+}
+
+#simon-says {
+	background-color: #000;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 1%;
+	position: relative;
+	border-radius: 50%;
+}
+
+#simon-says:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+#top-right {
+	top: 7.5%;
+	right: 7.5%;
+	border: 20vw solid;
+	border-top: none;
+    border-left: none;
+	border-color: #c30800;
+	border-top-right-radius: 20vw;
+}
+
+#top-left {
+	top: 0;
+	left: 0;
+	top: 7.5%;
+	left: 7.5%;
+	border: 20vw solid;
+	border-top: none;
+    border-right: none;
+	border-color: #0b7000;
+	border-top-left-radius: 20vw;
+}
+
+#bot-right {
+	bottom: 7.5%;
+	right: 7.5%;
+	border: 20vw solid;
+	border-top: none;
+    border-left: none;
+	border-color: #196d85;
+	border-bottom-right-radius: 20vw;
+}
+
+#bot-left {
+	bottom: 7.5%;
+	left: 7.5%;
+	border: 20vw solid;
+	border-top: none;
+    border-right: none;
+	border-color: #c3b400;
+	border-bottom-left-radius: 20vw;
+}
