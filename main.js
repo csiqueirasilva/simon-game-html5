@@ -41,7 +41,7 @@
 	var COLORS = [];
 	
 	COLORS[TLBTN] = {idle: '#0b7000', active: '#00ff00'};
-	COLORS[TRBTN] = {idle: '#c30800', active: '#ff0000'};
+	COLORS[TRBTN] = {idle: '#660800', active: '#ff0000'};
 	COLORS[BLBTN] = {idle: '#c3b400', active: '#ffff00'};
 	COLORS[BRBTN] = {idle: '#196d85', active: '#0000ff'};
 	
