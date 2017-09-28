@@ -148,7 +148,15 @@
 
 		var scoreFact = Math.max((100 - score * 2) / 100, 0.8);
 		
-		GAMESTACK.push(parseInt(Math.random() * btns.length));
+		var newPlay = parseInt(Math.random() * btns.length);
+		
+		if(GAMESTACK.length > 0) {
+			while(newPlay === GAMESTACK[GAMESTACK.length - 1]) {
+				newPlay = parseInt(Math.random() * btns.length);
+			}
+		}	
+		
+		GAMESTACK.push(newPlay);
 		
 		GAMESTACK.forEach(function(el, idx) {
 			setTimeout(function() {
