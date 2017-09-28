@@ -8,6 +8,7 @@
 	var brBtn = document.getElementById('bot-right');
 	
 	var score = 0;
+	var playingSound = false;
 	
 	var TIME_BTN_PLAY = 1500;
 	
@@ -16,7 +17,8 @@
 	btns.forEach(function(el, idx) {
 		el.idx = idx;
 		el.onclick = function() {
-			if(gameOn && waitingInput && AUDIO[this.idx].paused) {
+			if(!playingSound && gameOn && waitingInput && AUDIO[this.idx].paused) {
+				playingSound = true;
 				if(GAMESTACK.length === playerCursor) {
 					return;
 				} else if(GAMESTACK[playerCursor++] !== this.idx) {
@@ -70,6 +72,7 @@
 				AUDIO.LOSE.play();
 			}
 			document.getElementById('score').innerHTML = "0";
+			playingSound = false;
 		}, 500);
 	}
 	
@@ -90,6 +93,7 @@
 				document.getElementById('score').innerHTML = score;
 				pushGameStack();
 			}
+			playingSound = false;
 		};
 		AUDIO[i].load();
 	}
