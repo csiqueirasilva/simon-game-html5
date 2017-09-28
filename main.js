@@ -69,6 +69,7 @@
 			} else {
 				AUDIO.LOSE.play();
 			}
+			document.getElementById('score').innerHTML = "0";
 		}, 500);
 	}
 	
@@ -116,6 +117,7 @@
 	function startGame() {
 		GAMESTACK = [];
 		labelStartBtn.innerHTML = 'DESISTIR';
+		score = 0;
 		gameOn = true;
 		pushGameStack();
 	}
